@@ -1,5 +1,13 @@
 {
-   "applinks": {
-       "apps": ["6UQAD4B3U2.com.appsflyer.support.two"]
+    "applinks": {
+        "apps": [],
+        "details": [
+            {
+                "appID": "6UQAD4B3U2.com.appsflyer.support.two",
+                "paths": [
+                    "*"
+                ]
+            }
+        ]
     }
 }
