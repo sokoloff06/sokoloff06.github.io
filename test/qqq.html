@@ -83,9 +83,7 @@ if (app_name) {
   appNameElement.innerHTML = app_name;
 }
 function redirect_to_store() {
-  if (!document.hidden) {
-    window.location.href = store_link;
-  }
+console.log("Store redirect");
 }
 if (reg.test(scheme)) {
   var new_scheme = scheme + 'af';
