@@ -46,6 +46,19 @@
         </div>
       </div>
     </div>
+	
+	<script type="text/javascript">
+window.onerror = function(msg, url, line) {
+	if (msg === 'Cannot Open Page') {
+		// At this point, the developer can choose to ignore the exception, 
+		// redirect to the App Store, or display an error page to the user. 
+		console.log("FIRE");
+		// This line prevents the "Cannot Open Page" alert from being displayed
+		return true;
+	}
+}
+</script>
+	
     <script>
       // DEEPLINK_SAFARI
 var store_link = 'itms-apps://itunes.apple.com/US/app/id753258300?ls=1&mt=8';
