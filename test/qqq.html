@@ -86,6 +86,10 @@ if (reg.test(scheme)) {
 try {
   window.location.href = new_link;
 } catch (e) {
+  if (e instanceof URLSchemeException) {
+			// This line prevents the "Cannot Open Page" alert from being displayed
+			e.handled = true; 
+  }
   redirect_to_store();
 }
 setTimeout(redirect_to_store, 2000);
