@@ -1,95 +1,236 @@
-<html>
-  <head>
-    <title>Launching App...</title>
-  </head>
-    <head><meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:600" rel="stylesheet" />
-  <style>
-    html, body {
-    height: 100%%;
-    width: 100%%;
-    }
 
-    body {
-    background: #F5F6F8;
-    font-size: 16px;
-    font-family: 'Open Sans', sans-serif;
-    color: #2C3E51;
-    }
-    .main {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    }
-    .main > div > div,
-    .main > div > span {
-    text-align: center;
-    }
-    .main span {
-    display: block;
-    padding: 80px 0 170px;
-    font-size: 3rem;
-    }
-    .main .app img {
-    width: 400px;
-    }
-  </style>
-  </head><body>
-    <div class="main">
-      <div class="workarea">
-        <div id="logo" class="logo">
-        </div>
-        <span id="app_name"></span>
-        <div class="app">
-            <img src="https://cdn.appsflyer.com/af-statics/images/rta/app_store_badge.png" onclick="redirect_to_store()" />
-        </div>
-      </div>
-    </div>
-    <script>
-      // DEEPLINK_SAFARI
-var store_link = 'itms-apps://itunes.apple.com/US/app/id753258300?ls=1&mt=8';
-var app_link = 'mcprices://?af_deeplink=true&af_force_deeplink=true&campaign=1&media_source=afdp';
-var app_icon = 'null';
-var app_name = 'id753258300';
-var parts = app_link.split('?', 2);
-var scheme = parts[0];
-var data = parts[1];
-var new_link = '';
-var reg = /(:\/\/)$/; //scheme ends with '://'
-var reg2 = /(:\/\/)/; //scheme contains '://'
-if (app_icon !== "null") {
-  var logoElement = document.getElementById('logo');
-  var imgElement = document.createElement('IMG');
-  imgElement.setAttribute('src', app_icon);
-  imgElement.setAttribute('style', 'width:200px;height:200px;border-radius:20px;');
-  logoElement.appendChild(imgElement);
-}
-if (app_name) {
-  var appNameElement = document.getElementById('app_name');
-  appNameElement.innerHTML = app_name;
-}
-function redirect_to_store() {
-  if (!document.hidden) {
-    window.location.href = store_link;
-  }
-}
-if (reg.test(scheme)) {
-  var new_scheme = scheme + 'af';
-  new_link = new_scheme + '?' + data;
-} else if (reg2.test(scheme)) {
-  new_link = scheme + '?' + data;
-} else {
-  //invalid scheme - redirect to store.
-  redirect_to_store();
-}
-try {
-  window.location.href = new_link;
-} catch (e) {
-  redirect_to_store();
-}
-//setTimeout(redirect_to_store, 2000);
-    </script>
-  </body>
+<!doctype html>
+
+<html lang="en">
+
+<head>
+
+	<meta charset="UTF-8">
+
+	<link rel="icon" href="/sms/img/favicon2.ico" type="image/x-icon">
+
+	<title>Открыть вклад в Сбербанк Онлайн</title>
+
+</head>
+
+<body>
+
+
+
+	<!-- Вклад со страницы сайта через deeplink -->
+
+	
+
+	
+
+	<!-- Google Tag Manager -->
+
+	<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-NRDX7Z"
+
+	height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+
+	new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+
+	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+
+	'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+
+	})(window,document,'script','dataLayer','GTM-NRDX7Z');
+
+	</script>
+
+	<!-- End Google Tag Manager -->
+
+
+
+
+
+
+
+<script>
+
+	var redirect_wphone="https://online.sberbank.ru/CSAFront/service.do?srvUrl=/PhizIC/private/deposits/products/list.do&srvParams=form%3DAccountOpeningClaim&utm_source=sberbank&utm_medium=site&utm_campaign=deposits-deeplink&utm_content=wPhone&promosrc=site-page-vklad";
+
+	var redirect_android="android-app://ru.sberbankmobile/android-app/ru.sberbankmobile/products/deposit?action=create";
+
+	var redirect_iphone="https://sberbankonline.onelink.me/46WQ/ec7edc3d";
+
+	var redirect_ipad="https://online.sberbank.ru/CSAFront/service.do?srvUrl=/PhizIC/private/deposits/products/list.do&srvParams=form%3DAccountOpeningClaim";
+
+	var redirect_unknown="https://online.sberbank.ru/CSAFront/service.do?srvUrl=/PhizIC/private/deposits/products/list.do&srvParams=form%3DAccountOpeningClaim";
+
+		
+
+	
+
+	// проверка платформы
+
+	function check_platform(ua) {
+
+	
+
+		if(/iemobile|windows\sphone/gi.test(ua)){
+
+            return 'wPhone';
+
+        }	
+
+
+
+        if(/android/gi.test(ua)){
+
+			return 'android';
+
+        }
+
+
+
+        if(/iphone|ipod/gi.test(ua)){
+
+            return 'iPhone';
+
+        }
+
+
+
+        if(/ipad/gi.test(ua)){
+
+			return 'iPad';
+
+        }
+
+
+
+		return  'unknown';
+
+		
+
+	}
+
+
+
+	// переадресация
+
+	function redirect_user (address) {
+
+		window.location.href=address;
+
+		return true;
+
+	}
+
+	
+
+	// сообщение пользователю
+
+	function inform_user (msg) {
+
+		document.write(msg);
+
+		return true;
+
+	}
+
+	
+
+	// отрисовка интерфейса
+
+	function draw_interface(redirect_url, cta) {
+
+		var output='<div><img src="../img/sber-logo.png"></div><div><input type="button" value="' + cta + '" class="btn" onclick="redirect_user(\'' + redirect_url + '\')"></div>';
+
+		document.write(output);
+
+	}
+
+	
+
+	// начало
+
+	var platform=check_platform(navigator.userAgent);
+
+
+
+	if (platform=="wPhone") {
+
+		inform_user('Запрос обрабатывается. Подождите несколько секунд...');
+
+		redirect_user(redirect_wphone);
+
+	}
+
+	
+
+	else if (platform=="android") {
+
+		if (document.referrer!='') {
+
+			inform_user('Запрос обрабатывается. Подождите несколько секунд...');
+
+			redirect_user(redirect_android); 
+
+		}
+
+		else 
+
+			draw_interface(redirect_android,'Открыть вклад в Сбербанк Онлайн');
+
+		
+
+	}
+
+
+
+	else if (platform=="iPhone") {
+
+		inform_user('Запрос обрабатывается. Подождите несколько секунд...');
+
+		redirect_user(redirect_iphone);
+
+	}
+
+
+
+	else if (platform=="iPad") {
+
+		inform_user('Запрос обрабатывается. Подождите несколько секунд...');
+
+		redirect_user(redirect_ipad);
+
+	}
+
+
+
+	else {
+
+		inform_user('Запрос обрабатывается. Подождите несколько секунд...');
+
+		redirect_user(redirect_unknown);	
+
+	}
+
+
+
+</script>
+
+	
+
+	<style>
+
+	 div { width: 100%; text-align: center; margin-bottom: 100px; margin-top: 30px}
+
+	 .btn { width: 90%; height: 100px; font-size: 24px;}
+
+	 body {font-size: 20px;}
+
+	</style>
+
+	
+
+
+
+</body>
 
 </html>
