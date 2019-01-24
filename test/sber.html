@@ -1,0 +1,236 @@
+
+<!doctype html>
+
+<html lang="en">
+
+<head>
+
+	<meta charset="UTF-8">
+
+	<link rel="icon" href="/sms/img/favicon2.ico" type="image/x-icon">
+
+	<title>Открыть вклад в Сбербанк Онлайн</title>
+
+</head>
+
+<body>
+
+
+
+	<!-- Вклад со страницы сайта через deeplink -->
+
+	
+
+	
+
+	<!-- Google Tag Manager -->
+
+	<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-NRDX7Z"
+
+	height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+
+	new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+
+	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+
+	'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+
+	})(window,document,'script','dataLayer','GTM-NRDX7Z');
+
+	</script>
+
+	<!-- End Google Tag Manager -->
+
+
+
+
+
+
+
+<script>
+
+	var redirect_wphone="https://online.sberbank.ru/CSAFront/service.do?srvUrl=/PhizIC/private/deposits/products/list.do&srvParams=form%3DAccountOpeningClaim&utm_source=sberbank&utm_medium=site&utm_campaign=deposits-deeplink&utm_content=wPhone&promosrc=site-page-vklad";
+
+	var redirect_android="android-app://ru.sberbankmobile/android-app/ru.sberbankmobile/products/deposit?action=create";
+
+	var redirect_iphone="https://sberbankonline.onelink.me/46WQ/ec7edc3d";
+
+	var redirect_ipad="https://online.sberbank.ru/CSAFront/service.do?srvUrl=/PhizIC/private/deposits/products/list.do&srvParams=form%3DAccountOpeningClaim";
+
+	var redirect_unknown="https://online.sberbank.ru/CSAFront/service.do?srvUrl=/PhizIC/private/deposits/products/list.do&srvParams=form%3DAccountOpeningClaim";
+
+		
+
+	
+
+	// проверка платформы
+
+	function check_platform(ua) {
+
+	
+
+		if(/iemobile|windows\sphone/gi.test(ua)){
+
+            return 'wPhone';
+
+        }	
+
+
+
+        if(/android/gi.test(ua)){
+
+			return 'android';
+
+        }
+
+
+
+        if(/iphone|ipod/gi.test(ua)){
+
+            return 'iPhone';
+
+        }
+
+
+
+        if(/ipad/gi.test(ua)){
+
+			return 'iPad';
+
+        }
+
+
+
+		return  'unknown';
+
+		
+
+	}
+
+
+
+	// переадресация
+
+	function redirect_user (address) {
+
+		window.location.href=address;
+
+		return true;
+
+	}
+
+	
+
+	// сообщение пользователю
+
+	function inform_user (msg) {
+
+		document.write(msg);
+
+		return true;
+
+	}
+
+	
+
+	// отрисовка интерфейса
+
+	function draw_interface(redirect_url, cta) {
+
+		var output='<div><img src="../img/sber-logo.png"></div><div><input type="button" value="' + cta + '" class="btn" onclick="redirect_user(\'' + redirect_url + '\')"></div>';
+
+		document.write(output);
+
+	}
+
+	
+
+	// начало
+
+	var platform=check_platform(navigator.userAgent);
+
+
+
+	if (platform=="wPhone") {
+
+		inform_user('Запрос обрабатывается. Подождите несколько секунд...');
+
+		redirect_user(redirect_wphone);
+
+	}
+
+	
+
+	else if (platform=="android") {
+
+		if (document.referrer!='') {
+
+			inform_user('Запрос обрабатывается. Подождите несколько секунд...');
+
+			redirect_user(redirect_android); 
+
+		}
+
+		else 
+
+			draw_interface(redirect_android,'Открыть вклад в Сбербанк Онлайн');
+
+		
+
+	}
+
+
+
+	else if (platform=="iPhone") {
+
+		inform_user('Запрос обрабатывается. Подождите несколько секунд...');
+
+		redirect_user(redirect_iphone);
+
+	}
+
+
+
+	else if (platform=="iPad") {
+
+		inform_user('Запрос обрабатывается. Подождите несколько секунд...');
+
+		redirect_user(redirect_ipad);
+
+	}
+
+
+
+	else {
+
+		inform_user('Запрос обрабатывается. Подождите несколько секунд...');
+
+		redirect_user(redirect_unknown);	
+
+	}
+
+
+
+</script>
+
+	
+
+	<style>
+
+	 div { width: 100%; text-align: center; margin-bottom: 100px; margin-top: 30px}
+
+	 .btn { width: 90%; height: 100px; font-size: 24px;}
+
+	 body {font-size: 20px;}
+
+	</style>
+
+	
+
+
+
+</body>
+
+</html>
