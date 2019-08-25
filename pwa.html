@@ -27,7 +27,7 @@ cuid_el.innerHTML = cuid_el.innerHTML + cuid;
 appsflyer_el.innerHTML = appsflyer_el.innerHTML + appsflyer_id;
 
 if (document.referrer
-        && document.referrer.startsWith('android-app://com.example.twa') {
+        && document.referrer.startsWith('android-app://com.example.twa')) {
     // This is a TWA session!
     referrer = document.referrer;
     var referrer_el = document.getElementById("referrer");
