@@ -1,6 +1,10 @@
 <!DOCTYPE html>
-<h1 id="param_value">test = </h1>
-<a href="sdktest://test">Back to the app</a>
+
+<h1 id="cuid">CUID = </h1>
+<h1 id="appsflyer_id">AppsFlyer ID = </h1>
+<br>
+<a href="sdktest://test?cuid">Back to the app</a>
+
 <script>
     function getParameterByName(name, url) {
     if (!url) url = window.location.href;
@@ -12,10 +16,14 @@
     return decodeURIComponent(results[2].replace(/\+/g, ' '));
 }
 
-param = getParameterByName("test");
-
-var element = document.getElementById("param_value");
-element.innerHTML = element.innerHTML + param;
+cuid = getParameterByName("cuid");
+appsflyer_id = getParameterByName("cuid");
+    
+var cuid_el = document.getElementById("cuid");
+var appsflyer_el = document.getElementById("appsflyer_id");
+    
+cuid_el.innerHTML = cuid_el.innerHTML + cuid;
+appsflyer_el.innerHTML = appsflyer_el.innerHTML + appsflyer_id;
 
 </script>
 
