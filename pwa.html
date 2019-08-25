@@ -26,13 +26,14 @@ var appsflyer_el = document.getElementById("appsflyer_id");
 cuid_el.innerHTML = cuid_el.innerHTML + cuid;
 appsflyer_el.innerHTML = appsflyer_el.innerHTML + appsflyer_id;
 
-if (document.referrer
-        && document.referrer.startsWith('android-app://com.example.twa')) {
+if (document.referrer) {
     // This is a TWA session!
     referrer = document.referrer;
     var referrer_el = document.getElementById("referrer");
     referrer_el.innerHTML = referrer_el.innerHTML + referrer;
-}   
+} else {
+    referrer_el.innerHTML = referrer_el.innerHTML + "no_referrer_passed";
+}
 
 </script>
 
