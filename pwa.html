@@ -2,6 +2,7 @@
 
 <h1 id="cuid">CUID = </h1>
 <h1 id="appsflyer_id">AppsFlyer ID = </h1>
+<h1 id="referrer">Referrer = </h1>
 <br>
 <a href="sdktest://test?cuid">Back to the app</a>
 
@@ -24,6 +25,14 @@ var appsflyer_el = document.getElementById("appsflyer_id");
     
 cuid_el.innerHTML = cuid_el.innerHTML + cuid;
 appsflyer_el.innerHTML = appsflyer_el.innerHTML + appsflyer_id;
+
+if (document.referrer
+        && document.referrer.startsWith('android-app://com.example.twa') {
+    // This is a TWA session!
+    referrer = document.referrer;
+    var referrer_el = document.getElementById("referrer");
+    referrer_el.innerHTML = referrer_el.innerHTML + referrer;
+}   
 
 </script>
 
