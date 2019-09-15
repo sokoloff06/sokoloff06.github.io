@@ -29,11 +29,10 @@ cuid_el.innerHTML = cuid_el.innerHTML + cuid;
 appsflyer_el.innerHTML = appsflyer_el.innerHTML + appsflyer_id;
 
     
-
+var referrer_el = document.getElementById("referrer");
 if (document.referrer) {
     // This is a TWA session!
     referrer = document.referrer;
-    var referrer_el = document.getElementById("referrer");
     referrer_el.innerHTML = referrer_el.innerHTML + referrer;
 } else {
     referrer_el.innerHTML = referrer_el.innerHTML + "no_referrer_passed";
