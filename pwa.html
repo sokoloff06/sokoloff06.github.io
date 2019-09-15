@@ -26,6 +26,8 @@ var appsflyer_el = document.getElementById("appsflyer_id");
 cuid_el.innerHTML = cuid_el.innerHTML + cuid;
 appsflyer_el.innerHTML = appsflyer_el.innerHTML + appsflyer_id;
 
+    
+    document.ready(){
 if (document.referrer) {
     // This is a TWA session!
     referrer = document.referrer;
@@ -34,6 +36,7 @@ if (document.referrer) {
 } else {
     referrer_el.innerHTML = referrer_el.innerHTML + "no_referrer_passed";
 }
+    }
 
 </script>
 
