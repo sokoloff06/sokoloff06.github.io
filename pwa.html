@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 
+<body>
+
 <h1 id="cuid">CUID = </h1>
 <h1 id="appsflyer_id">AppsFlyer ID = </h1>
 <h1 id="referrer">Referrer = </h1>
@@ -27,7 +29,7 @@ cuid_el.innerHTML = cuid_el.innerHTML + cuid;
 appsflyer_el.innerHTML = appsflyer_el.innerHTML + appsflyer_id;
 
     
-    document.ready(){
+
 if (document.referrer) {
     // This is a TWA session!
     referrer = document.referrer;
@@ -36,8 +38,8 @@ if (document.referrer) {
 } else {
     referrer_el.innerHTML = referrer_el.innerHTML + "no_referrer_passed";
 }
-    }
 
 </script>
+</body>
 
 </html>
