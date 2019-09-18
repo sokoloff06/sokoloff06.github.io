@@ -7,6 +7,12 @@
                 "paths": [
                     "*"
                 ]
+            },
+            {
+                "appID": "6UQAD4B3U2.com.sokoloff06.sdktest1",
+                "paths": [
+                    "*"
+                ]
             }
         ]
     }
