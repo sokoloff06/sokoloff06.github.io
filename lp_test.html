@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<link id="dynamic-favicon" rel="icon" href="https://cdn.appsflyer.com/af-statics/images/favicon.ico"
+		type="image/x-icon" />
+	<title>SÜPER FİYATLAR SÜPER İNDİRİMLER</title>
+	<style>
+		@font-face {
+			font-family: museo-sans700;
+			src: url(https://cdn.appsflyer.com/dashboard/static/fonts/museosans700/MuseoSans_700-webfont.woff2);
+		}
+
+		@font-face {
+			font-family: museo-sans;
+			src: url(https://cdn.appsflyer.com/dashboard/static/fonts/museosans500/MuseoSans_500-webfont.woff2);
+		}
+
+		@font-face {
+			font-family: museo-sans300;
+			src: url(https://cdn.appsflyer.com/dashboard/static/fonts/museosans300/MuseoSans_300-webfont.woff2);
+		}
+
+		body {
+			font-family: museo-sans, sans-serif;
+			font-style: normal;
+			font-weight: 500;
+
+			position: relative;
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+
+		.image-container {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			overflow: hidden;
+
+			max-height: 85vw;
+			min-width: 100vw;
+		}
+
+		.main-image {
+			display: block;
+			max-height: 85vw;
+		}
+
+		#diagonal {
+			width: 0;
+			height: 0;
+			position: relative;
+			bottom: 20px;
+			border-bottom: 21px solid white;
+			border-right: 100vw solid transparent;
+		}
+
+		.content {
+			padding: 0 18px 10px 18px;
+			margin-top: -10px;
+		}
+
+		.tag {
+			font-weight: 500;
+			padding: 6px 8px 5px 8px;
+			font-size: 12px;
+			display: inline-block;
+			text-transform: uppercase;
+			background-color: #00ba94;
+			color: white;
+		}
+
+		.tag:empty {
+			display: none;
+		}
+
+		.title {
+			word-break: break-word;
+			margin-top: 10px;
+			margin-left: -1px;
+			font-family: museo-sans700;
+			font-size: 28px;
+			line-height: 34px;
+			color: black;
+		}
+
+		.description {
+			word-break: break-word;
+			font-weight: 300;
+			font-family: museo-sans300, sans-serif;
+			margin-top: 10px;
+			font-size: 16px;
+			line-height: 24px;
+			color: black;
+		}
+
+		.floating-action-button-container {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			position: fixed;
+			padding: 13px 18px;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			box-shadow: 0 -6px 10px 0 rgba(0, 0, 0, 0.03);
+			background: white;
+		}
+
+		.action-button {
+			font-weight: 500;
+			font-family: museo-sans, sans-serif;
+			box-shadow: 0 1px 11px 0 rgba(0, 0, 0, 0.17);
+			border: none;
+			border-radius: 25px;
+			height: 50px;
+			width: 100%;
+			font-size: 18px;
+			color: white;
+			background-color: #7f12d9;
+		}
+
+		.disclaimer {
+			font-family: museo-sans300, sans-serif;
+			font-weight: 300;
+			font-size: 13px;
+			margin-top: 8px;
+			text-align: center;
+			color: black;
+		}
+
+		.disclaimer:empty {
+			display: none;
+		}
+	</style>
+
+</head>
+
+<body>
+	<div class="image-container">
+		<img src="https://images.hepsiburada.net/assets/gif/hepsiburada/appsflyer/sm-landing_2-320x320.png" class='main-image' alt="image" id="image"/>
+</div>
+		<div id="diagonal"></div>
+		<div class="content">
+			<span id="tag" class="tag">25 MİLYONDAN FAZLA ÜRÜN ÇEŞİDİ</span>
+			<div class="title">SÜPER FİYATLAR SÜPER İNDİRİMLER</div>
+			<div class="description">keşfetmen için seni bekliyor</div>
+		</div>
+
+		<div id="spacer"></div>
+
+		<div class="floating-action-button-container" id="footer">
+			<button class="action-button" onclick="window.location.href='https://hepsi.onelink.me/d7ct/4x4?af_ol_red=true&af_attr=false&af_tranid=UDNoSGxhyewZGJtYyfSHrQ&af_ol_lp=true';">Fırsatları Kaçırma</button>
+			<div class="disclaimer"></div>
+		</div>
+
+		<script>
+			(function() {
+        var footer = document.getElementById('footer');
+        var spacer = document.getElementById('spacer');
+        var fHeight = window.getComputedStyle(footer).getPropertyValue('height');
+        var fPaddingTop = window.getComputedStyle(footer).getPropertyValue('padding-top');
+        var fPaddingBottom = window.getComputedStyle(footer).getPropertyValue('padding-bottom');
+        spacer.style.height = parseInt(fHeight) + parseInt(fPaddingTop) + parseInt(fPaddingBottom) + 'px';
+    })()
+		</script>
+</body>
+
+</html>
