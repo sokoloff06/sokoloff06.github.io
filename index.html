@@ -1,19 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon.ico">
     <title>Vitaly Playground</title>
+    <!-- Global site tag (gtag.js) - Google Ads: 10933249332 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-10933249332"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'AW-10933249332');
+    </script>
 </head>
+
 <body>
     <h1>Hello World!</h1>
 
 
-    <button onclick="alert('Thank you for subbscription!')">Subscribe for newsletter!</button>
+    <button onclick="alert('Thank you for subbscription!'); gtag_newsletter_sub();">Subscribe for newsletter!</button>
 
 
+
+
+<!-- Event snippet for Newsletter Subscribe conversion page
+In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+<script>
+    function gtag_newsletter_sub(url) {
+      var callback = function () {
+        if (typeof(url) != 'undefined') {
+          window.location = url;
+        }
+      };
+      gtag('event', 'conversion', {
+          'send_to': 'AW-10933249332/8AJICJr3oc0DELTKsN0o',
+          'event_callback': callback
+      });
+      return false;
+    }
+    </script>
+    
 
 </body>
+
 </html>
