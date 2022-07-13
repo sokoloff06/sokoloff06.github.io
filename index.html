@@ -11,8 +11,10 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=AW-10933249332"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-        console.log("gtag arguments: " + arguments)
-        function gtag() { dataLayer.push(arguments); }
+        function gtag() {
+            console.log("pushing to data layer arg: " + arguments)
+            dataLayer.push(arguments);
+        }
         gtag('js', new Date());
         gtag('config', 'AW-10933249332');
     </script>
@@ -27,23 +29,23 @@
 
 
 
-<!-- Event snippet for Newsletter Subscribe conversion page
+    <!-- Event snippet for Newsletter Subscribe conversion page
 In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
-<script>
-    function gtag_newsletter_sub(url) {
-      var callback = function () {
-        if (typeof(url) != 'undefined') {
-          window.location = url;
+    <script>
+        function gtag_newsletter_sub(url) {
+            var callback = function () {
+                if (typeof (url) != 'undefined') {
+                    window.location = url;
+                }
+            };
+            gtag('event', 'conversion', {
+                'send_to': 'AW-10933249332/8AJICJr3oc0DELTKsN0o',
+                'event_callback': callback
+            });
+            return false;
         }
-      };
-      gtag('event', 'conversion', {
-          'send_to': 'AW-10933249332/8AJICJr3oc0DELTKsN0o',
-          'event_callback': callback
-      });
-      return false;
-    }
     </script>
-    
+
 
 </body>
 
