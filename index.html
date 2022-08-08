@@ -2,53 +2,24 @@
 <html lang="en">
 
 <head>
+    <!-- Google Tag Manager -->
+    <script>
+        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-TRZ6M4Q');
+    </script>
+    <!-- End Google Tag Manager -->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon.ico">
     <title>Vitaly Playground</title>
-    <!-- Global site tag (gtag.js) - Google Ads: 10933249332 -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-10933249332"></script>
-    <!--Google Ads (adwords) Global Tag-->
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-        gtag('js', new Date());
-        gtag('config', 'AW-10933249332');
-    </script>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-58LN8TQVN6"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-
-        gtag('config', 'G-58LN8TQVN6');
-    </script>
-    <!-- Google Tag Manager -->
-    <script>(function (w, d, s, l, i) {
-            w[l] = w[l] || []; w[l].push({
-                'gtm.start':
-                    new Date().getTime(), event: 'gtm.js'
-            }); var f = d.getElementsByTagName(s)[0],
-                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
-                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
-        })(window, document, 'script', 'dataLayer', 'GTM-TRZ6M4Q');</script>
-    <!-- End Google Tag Manager -->
-    <style>
-        body {
-            background-color: darkseagreen;
-            font-family: sans-serif;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
     <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TRZ6M4Q" height="0" width="0"
-            style="display:none;visibility:hidden"></iframe></noscript>
+<noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TRZ6M4Q" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+</noscript>
     <!-- End Google Tag Manager (noscript) -->
     <h1>Hello World!</h1>
     
@@ -58,8 +29,7 @@
 
 
 
-    <!-- Event snippet for Newsletter Subscribe conversion page
-In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+    <!-- Event snippet for Newsletter Subscribe conversion page. In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
     <script>
         function gtag_newsletter_sub(url) {
             var callback = function () {
@@ -74,8 +44,6 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
             return false;
         }
     </script>
-
-
 </body>
 
 </html>
