@@ -1,4 +1,22 @@
-body {
-    background-color: darkseagreen;
-    font-family: sans-serif;
+header {
+  text-align: center;
+}
+* {
+  color: white;
+  background: black;
+  font-weight: 300;
+  font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui,
+    helvetica neue, helvetica, Cantarell, Ubuntu, roboto, noto, arial,
+    sans-serif;
+}
+
+h1 {
+  --tw-gradient-from: #ec008c;
+  --tw-gradient-to: #0070f3;
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+  background-image: linear-gradient(to right, var(--tw-gradient-stops));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 40px;
 }
