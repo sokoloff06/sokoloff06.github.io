@@ -1,28 +1,42 @@
-[{
-  "relation": ["delegate_permission/common.handle_all_urls"],
-  "target": {
-    "namespace": "android_app",
-    "package_name": "com.example.sokol.mcprices",
-    "sha256_cert_fingerprints":
-    ["74:F9:2B:33:52:B0:32:49:87:9C:70:E0:A1:F0:16:85:72:51:C2:01:DF:AA:99:0D:1B:BE:68:CF:C1:E2:E7:F7"]
-  }
-},
-{
-  "relation": ["delegate_permission/common.handle_all_urls"],
-  "target" : { 
-    "namespace": "android_app", 
-    "package_name": "com.sokoloff06.twa",
-    "sha256_cert_fingerprints": 
-    ["74:F9:2B:33:52:B0:32:49:87:9C:70:E0:A1:F0:16:85:72:51:C2:01:DF:AA:99:0D:1B:BE:68:CF:C1:E2:E7:F7"]
-  }
-},
+[
   {
-  "relation": ["delegate_permission/common.handle_all_urls"],
-  "target" : { 
-    "namespace": "android_app", 
-    "package_name": "com.sokoloff06.twax",
-    "sha256_cert_fingerprints": 
-    ["74:F9:2B:33:52:B0:32:49:87:9C:70:E0:A1:F0:16:85:72:51:C2:01:DF:AA:99:0D:1B:BE:68:CF:C1:E2:E7:F7"]
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.example.sokol.mcprices",
+      "sha256_cert_fingerprints": [
+        "74:F9:2B:33:52:B0:32:49:87:9C:70:E0:A1:F0:16:85:72:51:C2:01:DF:AA:99:0D:1B:BE:68:CF:C1:E2:E7:F7"
+      ]
+    }
+  },
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.sokoloff06.twa",
+      "sha256_cert_fingerprints": [
+        "74:F9:2B:33:52:B0:32:49:87:9C:70:E0:A1:F0:16:85:72:51:C2:01:DF:AA:99:0D:1B:BE:68:CF:C1:E2:E7:F7"
+      ]
+    }
+  },
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.sokoloff06.twax",
+      "sha256_cert_fingerprints": [
+        "74:F9:2B:33:52:B0:32:49:87:9C:70:E0:A1:F0:16:85:72:51:C2:01:DF:AA:99:0D:1B:BE:68:CF:C1:E2:E7:F7"
+      ]
+    }
+  },
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.google.firebaseengage",
+      "sha256_cert_fingerprints": [
+        "C5:E1:B1:30:1E:18:59:9F:4B:CC:1A:24:DC:37:C6:1C:7B:5F:85:A5:2D:BD:60:9C:D4:7A:99:3F:31:0A:CB:29"
+      ]
+    }
   }
-}
 ]
