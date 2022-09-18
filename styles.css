@@ -15,10 +15,6 @@
       format("svg"); /* Legacy iOS */
 }
 
-header {
-  text-align: center;
-}
-
 * {
   color: white;
   background: black;
@@ -26,10 +22,18 @@ header {
   font-family: "Lato", -apple-system, BlinkMacSystemFont, avenir next, avenir,
     segoe ui, helvetica neue, helvetica, Cantarell, Ubuntu, roboto, noto, arial,
     sans-serif;
-  font: block;
 }
 
-h1 {
+header {
+  text-align: center;
+}
+
+.section-decription {
+  margin: 0 20px auto;
+  text-align: center;
+}
+
+.bg-gradient-to-r {
   --tw-gradient-from: #ff39b0;
   --tw-gradient-to: #288cff;
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
@@ -37,5 +41,32 @@ h1 {
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-size: 40px;
+  font: bold;
+}
+
+.title {
+  margin: 0px;
+}
+
+.section-decription {
+  display: flex;
+}
+
+.avatar {
+  width: 20%;
+  align-self: flex-start;
+}
+
+/* Small screens */
+@media only screen and (max-width: 415px) {
+  h1 {
+    font-size: 40px;
+  }
+}
+
+/* Big screens */
+@media only screen and (min-width: 416px) {
+  h1 {
+    font-size: 60px;
+  }
 }
