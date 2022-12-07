@@ -2,14 +2,16 @@
 <html lang="en">
 
 <head>
+    <script src="./script.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', (e) => {
-            console.log("JS: DOMContentLoaded at " + Date.now())
+            console.log("JS: document.DOMContentLoaded at " + Date.now())
         })
-    </script>
-    <script>
-        document.addEventListener('load', (e) => {
-            console.log("JS: load at " + Date.now())
+        addEventListener('DOMContentLoaded', (e) => {
+            console.log("JS: window.DOMContentLoaded at " + Date.now())
+        })
+        addEventListener('load', (e) => {
+            console.log("JS: window.load at " + Date.now())
         })
     </script>
     <!-- Google Tag Manager -->
@@ -38,7 +40,12 @@
     <header>
         <h1 class="to-blue-500 bg-gradient-to-r">Welcome to Web Playground</h1>
     </header>
-    <button id="subscribe_cta" onclick="alert('Thank you for subbscription!')">Subscribe for newsletter!</button>
+    <div class="container">
+        <button id="subscribe_cta" onclick="alert('Thank you for subbscription!')">Subscribe for newsletter!</button>
+        <button id="runLongTaskJS" onclick="runLongTask()">Run long task JS</button>
+        <button id="runLongTaskGTMTrigger" onclick="pushEvent('runLongTask')">Run long task GTM Trigger</button>
+        <button id="loadLongTaskGTMTrigger" onclick="pushEvent('loadLongTask')">Load long task GTM Trigger</button>
+    </div>
 </body>
 
 </html>
