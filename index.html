@@ -1,9 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+    <script>
+        document.addEventListener('DOMContentLoaded', (e) => {
+            console.log("JS: DOMContentLoaded at " + Date.now())
+        })
+    </script>
+    <script>
+        document.addEventListener('load', (e) => {
+            console.log("JS: load at " + Date.now())
+        })
+    </script>
     <!-- Google Tag Manager -->
     <script>
-        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-TRZ6M4Q');
+            (function (w, d, s, l, i) { w[l] = w[l] || []; w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' }); var f = d.getElementsByTagName(s)[0], j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f); })(window, document, 'script', 'dataLayer', 'GTM-TRZ6M4Q');
     </script>
     <!-- End Google Tag Manager -->
     <meta charset="UTF-8">
@@ -16,10 +27,12 @@
     <!-- CSS -->
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
     <!-- Google Tag Manager (noscript) -->
     <noscript>
-    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TRZ6M4Q" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TRZ6M4Q" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe>
     </noscript>
     <!-- End Google Tag Manager (noscript) -->
     <header>
