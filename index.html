@@ -2,9 +2,13 @@
 <html lang="en">
 
 <head>
+    <!-- Optimize (to be sunset) -->
     <script src="https://www.googleoptimize.com/optimize.js?id=OPT-PWSTCL4"></script>
+    <!-- GIS -->
     <script src="https://accounts.google.com/gsi/client" async defer></script>
+    <!-- JS functions -->
     <script src="./script.js"></script>
+    <!-- Load events -->
     <script>
         document.addEventListener('DOMContentLoaded', (e) => {
             console.log("JS: document.DOMContentLoaded at " + Date.now())
@@ -53,19 +57,49 @@
             <input type="email" name="email" id="email">
             <input type="submit">
         </form>
+        <!-- GIS button START -->
         <div id="g_id_onload" data-client_id="106360425701-t737nnlc5fdgq2mugavu1h45mr21224b.apps.googleusercontent.com"
             data-context="signin" data-ux_mode="popup" data-callback="processSignIn" data-auto_prompt="false">
         </div>
-
         <div class="g_id_signin" data-type="standard" data-shape="rectangular" data-theme="outline"
             data-text="signin_with" data-size="large" data-logo_alignment="left">
         </div>
+        <!-- GIS button END -->
+        <!-- Fruttify URI-scheme deep link -->
         <a href="fruttify://test-link?utm_source=gh.visokolov.com">Fruttify URI-scheme link</a>
         <img src="https://assets.stickpng.com/images/580b57fcd9996e24bc43c51f.png" />
-        <video controls preload loop autoplay="true">
+        <video preload loop autoplay muted>
             <source src="./assets/stock-video.mp4" type="video/mp4">
         </video>
     </div>
 </body>
+<!-- Firebase modules -->
+<!-- Insert this script at the bottom of the HTML, but before you use any Firebase services -->
+<script type="module">
+    import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.22.0/firebase-app.js'
+
+    // If you enabled Analytics in your project, add the Firebase SDK for Google Analytics
+    import { getAnalytics } from 'https://www.gstatic.com/firebasejs/9.22.0/firebase-analytics.js'
+
+    // Add Firebase products that you want to use
+    import { getAuth } from 'https://www.gstatic.com/firebasejs/9.22.0/firebase-auth.js'
+    import { getFirestore } from 'https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore.js'
+</script>
+<!-- Initializing Firebase -->
+<script type="module">
+    // TODO: Replace the following with your app's Firebase project configuration
+    const firebaseConfig = {
+        apiKey: "AIzaSyBNyQZRjqcpIpP9aLGJ4J2HmLalecW7fnk",
+        authDomain: "visokolov.firebaseapp.com",
+        databaseURL: "https://visokolov-default-rtdb.europe-west1.firebasedatabase.app",
+        projectId: "visokolov",
+        storageBucket: "visokolov.appspot.com",
+        messagingSenderId: "106360425701",
+        appId: "1:106360425701:web:8f33d7458a28273821d80c",
+        measurementId: "G-XHN5QV9NPK"
+    };
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+</script>
 
 </html>

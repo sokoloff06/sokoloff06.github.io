@@ -12,6 +12,6 @@ function pushEvent(eventName) {
     dataLayer.push({ event: eventName })
 }
 
-function processSignIn() {
-    console.log('Processed Sign In: ' + arguments)
+function processSignIn(creds) {
+    console.log('Processed Sign In: ' + creds)
 }
