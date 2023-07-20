@@ -13,5 +13,5 @@ function pushEvent(eventName) {
 }
 
 function processSignIn(creds) {
-    console.log('Processed Sign In: ' + creds)
+    console.log('Processed Sign In: ' + creds.credential)
 }
