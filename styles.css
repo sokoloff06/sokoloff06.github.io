@@ -1,87 +1,87 @@
 /* lato-300 - latin */
 @font-face {
-  font-display: swap;
-  font-family: "Lato";
-  font-style: normal;
-  font-weight: 300;
-  src: url("fonts/lato-v23-latin-300.eot"); /* IE9 Compat Modes */
-  src: local(""),
-    url("fonts/lato-v23-latin-300.eot?#iefix") format("embedded-opentype"),
-    /* IE6-IE8 */ url("fonts/lato-v23-latin-300.woff2") format("woff2"),
-    /* Super Modern Browsers */ url("fonts/lato-v23-latin-300.woff")
-      format("woff"),
-    /* Modern Browsers */ url("fonts/lato-v23-latin-300.ttf") format("truetype"),
-    /* Safari, Android, iOS */ url("fonts/lato-v23-latin-300.svg#Lato")
-      format("svg"); /* Legacy iOS */
+    font-display: swap;
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 300;
+    src: url('fonts/lato-v23-latin-300.eot'); /* IE9 Compat Modes */
+    src: local(''),
+        url('fonts/lato-v23-latin-300.eot?#iefix') format('embedded-opentype'),
+        /* IE6-IE8 */ url('fonts/lato-v23-latin-300.woff2') format('woff2'),
+        /* Super Modern Browsers */ url('fonts/lato-v23-latin-300.woff')
+            format('woff'),
+        /* Modern Browsers */ url('fonts/lato-v23-latin-300.ttf')
+            format('truetype'),
+        /* Safari, Android, iOS */ url('fonts/lato-v23-latin-300.svg#Lato')
+            format('svg'); /* Legacy iOS */
 }
 
 * {
-  color: white;
-  background: black;
-  font-weight: 300;
-  font-family: "Lato", -apple-system, BlinkMacSystemFont, avenir next, avenir,
-    segoe ui, helvetica neue, helvetica, Cantarell, Ubuntu, roboto, noto, arial,
-    sans-serif;
+    color: white;
+    background: black;
+    font-weight: 300;
+    font-family: 'Lato', -apple-system, BlinkMacSystemFont, avenir next, avenir,
+        segoe ui, helvetica neue, helvetica, Cantarell, Ubuntu, roboto, noto,
+        arial, sans-serif;
 }
 
 header {
-  text-align: center;
+    text-align: center;
 }
 
 .container {
-  margin: auto;
-  width: fit-content;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
+    margin: auto;
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .container > * {
-  margin: 1vh;
-  width: fit-content;
-  max-width: 50vw;
+    margin: 1vh;
+    max-width: 50vw;
 }
 
 .section-decription {
-  margin: 0 20px auto;
-  text-align: center;
+    margin: 0 20px auto;
+    text-align: center;
 }
 
 .bg-gradient-to-r {
-  --tw-gradient-from: #ff39b0;
-  --tw-gradient-to: #288cff;
-  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
-  background-image: linear-gradient(to right, var(--tw-gradient-stops));
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font: bold;
+    --tw-gradient-from: #ff39b0;
+    --tw-gradient-to: #288cff;
+    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+    background-image: linear-gradient(to right, var(--tw-gradient-stops));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font: bold;
 }
 
 .title {
-  margin: 0px;
+    margin: 0px;
 }
 
 .section-decription {
-  display: flex;
+    display: flex;
 }
 
 .avatar {
-  width: 20%;
-  align-self: flex-start;
+    width: 20%;
+    align-self: flex-start;
 }
 
 /* Small screens */
 @media only screen and (max-width: 415px) {
-  h1 {
-    font-size: 40px;
-  }
+    h1 {
+        font-size: 40px;
+    }
 }
 
 /* Big screens */
 @media only screen and (min-width: 416px) {
-  h1 {
-    font-size: 60px;
-  }
+    h1 {
+        font-size: 60px;
+    }
 }
