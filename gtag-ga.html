@@ -22,14 +22,14 @@
         addEventListener('load', (e) => {
             console.log("JS: window.load at " + Date.now())
         })
-        console.log("before clientId promise")
+        console.log("before clientId promise " + Date.now())
         const clientIdPromise = new Promise(resolve => {
-            console.log("inside clientId promise")
+            console.log("inside clientId promise " + Date.now())
             gtag('get', 'G-58LN8TQVN6', 'client_id', resolve)
         });
-        console.log("after clientId promise")
+        console.log("after clientId promise " + Date.now())
         clientIdPromise.then((client_id) => {
-            console.log(client_id)
+            console.log(client_id + Date.now())
         })
     </script>
     <meta charset="UTF-8">
