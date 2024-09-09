@@ -22,6 +22,15 @@
         addEventListener('load', (e) => {
             console.log("JS: window.load at " + Date.now())
         })
+        console.log("before clientId promise")
+        const clientIdPromise = new Promise(resolve => {
+            console.log("inside clientId promise")
+            gtag('get', 'G-58LN8TQVN6', 'client_id', resolve)
+        });
+        console.log("after clientId promise")
+        clientIdPromise.then((client_id) => {
+            console.log(client_id)
+        })
     </script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
