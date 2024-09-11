@@ -31,6 +31,23 @@
         clientIdPromise.then((client_id) => {
             console.log("clientId promise resoled with " + client_id + " at " + Date.now())
         })
+
+        window.addEventListener('ga4IdsFetched', (e) => {
+            console.log(Date.now() + ": " + e.detail)
+        })
+        gtag('get', 'G-58LN8TQVN6', 'client_id', (client_id) => {
+            console.log(Date.now() + ' client_id:' + client_id);
+            gtag('get', 'G-58LN8TQVN6', 'session_id', (session_id) => {
+                console.log(Date.now() + ' session_id:' + session_id);
+                window.dispatchEvent(new CustomEvent('ga4IdsFetched', {
+                    detail: {
+                        client_id: client_id,
+                        session_id: session_id
+                    }
+                }));
+            });
+        });
+
     </script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
