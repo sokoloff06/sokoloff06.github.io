@@ -10,5 +10,17 @@
             "namespace": "android_app"
         },
         "relation": ["delegate_permission/common.handle_all_urls"]
+    },
+    {
+        "target": {
+            "package_name": "com.google.firebaseengage",
+            "sha256_cert_fingerprints": [
+                "C5:E1:B1:30:1E:18:59:9F:4B:CC:1A:24:DC:37:C6:1C:7B:5F:85:A5:2D:BD:60:9C:D4:7A:99:3F:31:0A:CB:29",
+                "AD:48:19:3B:64:BC:42:B2:3D:46:C6:7B:C9:5D:C4:81:A0:D8:15:CA:E3:73:36:C8:2F:35:D5:25:07:53:E0:62",
+                "00:6B:58:4E:DE:EE:2C:5B:40:DC:0B:E1:73:9B:54:53:68:7B:CC:32:F1:0C:0D:56:F4:69:83:6D:55:B3:A8:6D"
+            ],
+            "namespace": "android_app"
+        },
+        "relation": ["delegate_permission/common.handle_all_urls"]
     }
 ]
