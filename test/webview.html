@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complete Your Purchase</title>
+    <!-- Google Fonts - Poppins for a modern, clean look -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* General Body Styling */
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #f0f4f8, #d9e2ec);
+            /* Soft, light gradient background */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            /* Ensures the page takes full viewport height */
+            color: #333;
+            text-align: center;
+            padding: 20px;
+            /* Add some padding for smaller screens */
+            box-sizing: border-box;
+            /* Include padding in element's total width and height */
+        }
+
+        /* Container for the main content */
+        .container {
+            background-color: #ffffff;
+            padding: 40px 60px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            /* Gentle shadow for depth */
+            max-width: 500px;
+            width: 100%;
+            /* Ensures responsiveness */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            /* Spacing between elements */
+            box-sizing: border-box;
+        }
+
+        /* Heading Style */
+        h1 {
+            color: #2c3e50;
+            font-size: 2.5em;
+            /* Larger, prominent heading */
+            margin-bottom: 10px;
+            line-height: 1.2;
+        }
+
+        /* Paragraph Style */
+        p {
+            font-size: 1.1em;
+            color: #555;
+            margin-bottom: 20px;
+            line-height: 1.6;
+            max-width: 400px;
+            /* Constrain paragraph width for readability */
+        }
+
+        /* "Make Purchase" Button Styling */
+        .purchase-button {
+            display: inline-block;
+            /* Allows padding and width to be set */
+            background: linear-gradient(45deg, #6a11cb 0%, #2575fc 100%);
+            /* Vibrant, modern gradient */
+            color: #ffffff;
+            border: none;
+            padding: 18px 40px;
+            font-size: 1.3em;
+            font-weight: 600;
+            border-radius: 50px;
+            /* Fully rounded pill shape */
+            cursor: pointer;
+            transition: all 0.3s ease;
+            /* Smooth transitions for hover effects */
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            /* Button shadow for lift */
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            outline: none;
+            /* Remove default browser focus outline */
+            text-decoration: none;
+            /* In case it's a link */
+        }
+
+        /* Button Hover Effect */
+        .purchase-button:hover {
+            transform: translateY(-3px) scale(1.02);
+            /* Slight lift and subtle scale */
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
+            /* Enhanced shadow on hover */
+            background: linear-gradient(45deg, #5e0ad1 0%, #1f64e2 100%);
+            /* Slightly darker gradient on hover */
+        }
+
+        /* Button Active (Click) Effect */
+        .purchase-button:active {
+            transform: translateY(1px);
+            /* Push down effect */
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 600px) {
+            .container {
+                padding: 30px 20px;
+                /* Adjust padding for smaller screens */
+            }
+
+            h1 {
+                font-size: 2em;
+                /* Smaller heading on mobile */
+            }
+
+            p {
+                font-size: 1em;
+                /* Smaller paragraph text on mobile */
+            }
+
+            .purchase-button {
+                padding: 15px 30px;
+                font-size: 1.1em;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Your Item Awaits!</h1>
+        <p>You're just one step away from completing your secure purchase. Click the button below to proceed.</p>
+        <button class="purchase-button" onclick="alert('Purchase Initiated!')">Make Purchase</button>
+    </div>
+</body>
+
+</html>
